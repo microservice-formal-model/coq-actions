@@ -13,5 +13,15 @@ Make sure to activate the association between -.v files and COQ-IDE.
 
 The files depend on each other and thus need to be compiled in the right order.
 - Start by opening `ActionsDefinitions.v` with *CoqIDE*. Go to menu `Compile -> Compile Buffer`.
+  This should create an output that looks like this:
+  ```
+  Running: coqc "-topfile" "...\coq-actions\ActionDefinitions.v" "...\coq-actions\ActionDefinitions.v" 2>&1
+  ```
+  New files should appear in the folder:
+  ```
+  ActionDefinitions.vo
+  ActionDefinitions.vok
+  ActionDefinitions.vos
+  ```
 - Next, open `ActionStructuralEquality.v` also with *CoqIDE*. Compile the file using `Compile -> Compile Buffer`.
 - Repeat the step for `ActionDefinitionsB.v`, then `ActionEquivalence.v`.
